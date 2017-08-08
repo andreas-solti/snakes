@@ -2,7 +2,14 @@ SNAKES is the Net Algebra Kit for Editors and Simulators
 ========================================================
 
 This fork is an extension with time and batching.
-You can find the original sources here: [[https://github.com/fpom/snakes][SNAKES]] 
+You can find the original sources here: [SNAKES](https://github.com/fpom/snakes) Credit goes to Franck Pommereau and his team.
+
+You need some python packages to run it:
+* scipy
+* numpy
+* json-logic
+* sortedcontainers
+
 
 Useful links
 ------------
