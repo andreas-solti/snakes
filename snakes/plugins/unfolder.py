@@ -3,17 +3,12 @@ from collections import defaultdict
 
 __author__ = 'andreas'
 
-from numpy.distutils.system_info import lapack_src_info
 from datetime import datetime, timedelta
 
 from enum import Enum
 import collections
-import re  # regular expressions
-import sys
 
 import snakes.plugins
-from snakes import ConstraintError
-from sortedcontainers import SortedList, SortedSet, SortedDict
 import pmlab
 import pmlab.log
 import pmlab.log.reencoders

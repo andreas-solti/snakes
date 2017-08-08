@@ -236,7 +236,7 @@ def extend(module):
             if hasattr(other, '_time'):
                 if self._time == other.get_time():
                     if self.value != other.value:
-                        print "stop for a sec."
+                        print("stop for a sec.")
                     return cmp(self.value, other.value)
                 return int(self._time - other.get_time())
             else:
@@ -289,7 +289,7 @@ def extend(module):
             :type hello: `float`
             :type dist: `Distribution`
             """
-            print "transition kwargs {}".format(kwargs)
+            print("transition kwargs {}".format(kwargs))
             self._weight = kwargs.pop("weight", 1)
             self._invisible = kwargs.pop("invisible", False)
             self._dist = kwargs.pop("dist", Distribution("exponential"))
@@ -298,7 +298,7 @@ def extend(module):
             self._execution_plan = kwargs.pop("execution_plan", None)
             self._start = False
             module.Transition.__init__(self, name, guard)
-            print "created transition {} with weight: {} and dist: {}".format(name, self._weight, self._dist)
+            print("created transition {} with weight: {} and dist: {}".format(name, self._weight, self._dist))
 
         # def __str__(self):
         #     """Simple string representation (that of the value)
@@ -424,7 +424,7 @@ def extend(module):
                     if snapshot_principle and place.get_name().endswith("_finished"):
                         # store sojourn time:
                         if len(tokens) > 1:
-                            print "debug me!"
+                            print("debug me!")
                         sojourn_time = iter(tokens).next().get_last_sojourn_time()
                         place.set_last_sojourn_time(sojourn_time)
                 return time
@@ -518,7 +518,7 @@ def extend(module):
             else:
                 varnames = extractVarNamesFromLogic(self.logic)
                 if len([name for name in varnames if name not in BatchStrategy.timevars]) > 0:
-                    print "check varnames! {}".format([name for name in varnames if name not in BatchStrategy.timevars])
+                    print("check varnames! {}".format([name for name in varnames if name not in BatchStrategy.timevars]))
                 self._has_timeout = len(set(BatchStrategy.timevars) & set(varnames)) > 0
 
         def has_timeout(self):
@@ -747,8 +747,8 @@ def extend(module):
                         rule.logic["or"][-1][">="][-1] = threshold_waiting_time
 
                     trans.set_batch_strategy(rule)
-            print "-- Annotated {} transitions with batch rules! --".format(len(annotated))
-            print "-- not annotated transitions: {} --".format(str(not_annotated))
+            print("-- Annotated {} transitions with batch rules! --".format(len(annotated)))
+            print("-- not annotated transitions: {} --".format(str(not_annotated)))
             return net
 
         def get_rule(self, rulepart):
@@ -815,7 +815,7 @@ def extend(module):
                     dist_type = DistributionType.kernel_density_estimate
 
             self._name = dist_type
-            print "creating {} distribution with {} values".format(dist_type, self._param)
+            print("creating {} distribution with {} values".format(dist_type, self._param))
 
         def __repr__(self):
             return "{} distribution (params:{})".format(self._name, self._param)
@@ -858,13 +858,13 @@ def extend(module):
             elif self._name == DistributionType.immediate:
                 return 0
             else:
-                print "please implement for the Mean {} - debug me!".format(self._name)
+                print("please implement for the Mean {} - debug me!".format(self._name))
                 return -1
 
         def get_CV(self):
             if self._name == DistributionType.kernel_density_estimate or self._name == DistributionType.empirical:
                 if np.mean(self._param)==0:
-                    print "zero mean for the CV calculation - debug me!"
+                    print("zero mean for the CV calculation - debug me!")
                 else:
                     return np.std(self._param)/np.mean(self._param)
             elif self._name == DistributionType.exponential:
@@ -874,7 +874,7 @@ def extend(module):
             elif self._name == DistributionType.immediate:
                 return 0
             else:
-                print "please implement for the CV {} - debug me!".format(self._name)
+                print("please implement for the CV {} - debug me!".format(self._name))
                 return -1
 
     class TimeSimulator(object):
@@ -1091,7 +1091,7 @@ def extend(module):
             iterations_without_change = 0
             while num < TimeSimulator.MAX_EVENTS_PER_RUN and iterations_without_change < TimeSimulator.MAX_ITERATIONS_WITHOUT_PROGRESS:
                 if num % 100 == 0:
-                    print 'done {} iterations. Times to check: {}'.format(num, len(times_to_check))
+                    print("done {} iterations. Times to check: {}".format(num, len(times_to_check)))
                 num += 1
                 iterations_without_change += 1
                 enabled_transitions = {}
@@ -1141,7 +1141,7 @@ def extend(module):
                                             enabled_transitions[trans] = [mode]
                                             sum_weight += trans.get_weight()
                                         else:
-                                            print "did not find corresponding mode for {} in {}".format(modes, exec_plan.get_plan)
+                                            print("did not find corresponding mode for {} in {}".format(modes, exec_plan.get_plan))
                                     elif modes:
                                         # there can be many modes, but each of them should have a resource
                                         waiting_times = self.get_waiting_case_token_times(modes, global_time)
@@ -1202,7 +1202,7 @@ def extend(module):
                                             else:
                                                 trans.not_starting = 1
                                             if trans.not_starting % 200 == 0:
-                                                print "trans {} not starting for {} iterations".format(trans, trans.not_starting)
+                                                print("trans {} not starting for {} iterations".format(trans, trans.not_starting))
                                             if trans.not_starting < self.MAX_ITERATIONS_WITHOUT_PROGRESS_PER_TASK:
                                                 next_time = int(strategy.get_next_time_to_check(trans, time_waiting, mean_waiting_time,
                                                                                                   maximum_flow_time,
@@ -1238,14 +1238,14 @@ def extend(module):
                         break
                     global_time = times_to_check.pop(0)
                     if TimeSimulator.DEBUG:
-                        print "no transitions enabled at time {} checking model at time {}".format(last_time,
-                                                                                                   global_time)
+                        print("no transitions enabled at time {} checking model at time {}".format(last_time,
+                                                                                                   global_time))
                         # self.net.draw("generated_during_simulation.png")
                 else:
                     # pick according to transition weights
                     trans_to_fire = random.uniform(0, sum_weight)
                     if TimeSimulator.DEBUG:
-                        print "sampled {} from {}".format(trans_to_fire, sum_weight)
+                        print("sampled {} from {}".format(trans_to_fire, sum_weight))
                     cumulative_weight = 0
                     transition = None
                     for enabled, modes in enabled_transitions.iteritems():
@@ -1266,7 +1266,7 @@ def extend(module):
                     if exec_plan is not None:
                         stored_modes = exec_plan.get_plan()
                         if TimeSimulator.DEBUG:
-                            print "{} items in batch for transition {}.".format(len(stored_modes), transition)
+                            print("{} items in batch for transition {}.".format(len(stored_modes), transition))
                         stored_mode_key = get_stored_mode_key(mode, exec_plan)
                         if stored_mode_key > -1:
                             stored_modes.pop(stored_mode_key)
@@ -1275,13 +1275,13 @@ def extend(module):
                             transition.set_execution_plan(None)  # finished batch!
                             batchTransitions.remove(transition)
                             if TimeSimulator.DEBUG:
-                                print "finished batch for transition {}".format(transition)
+                                print("finished batch for transition {}".format(transition))
                     elif transition.get_start() and len(modes) > 1:
                         # fprint "transition {} starts batch at {}".format(transition, TimeSimulator.PART_OF_DAY_LOOKUP[global_datetime.hour])
                         if TimeSimulator.DEBUG:
-                            print "transition {} starts batch of size {} with longest wait: {} minutes.".format(
+                            print("transition {} starts batch of size {} with longest wait: {} minutes.".format(
                                 transition, len(modes),
-                                round(max(self.get_waiting_case_token_times(modes, global_time)) / 60000))
+                                round(max(self.get_waiting_case_token_times(modes, global_time)) / 60000)))
                         batchTransitions.add(transition)
                         exec_plan = ExecutionPlan(modes)
                         transition.set_execution_plan(exec_plan)
@@ -1298,7 +1298,7 @@ def extend(module):
                     activeTransitions = activeTransitions.union(newlyEnabledTransitions)
                     self.update_history(mode, transition, global_time, (time-global_time))
                     if TimeSimulator.DEBUG:
-                        print "fired transition: {} at time {} with duration {}".format(transition.name, global_time, (time - global_time))
+                        print("fired transition: {} at time {} with duration {}".format(transition.name, global_time, (time - global_time)))
                     # self.net.draw("model_during_sim.png")
                     iterations_without_change = 0
 
@@ -1313,7 +1313,7 @@ def extend(module):
                         self.net.draw("{}/generated_debug.png".format(rulename))
 
                     if TimeSimulator.DEBUG:
-                        print "times to check: {}".format(times_to_check)
+                        print("times to check: {}".format(times_to_check))
 
             print "times_to_check: {}".format(times_to_check)
             print "\n\nnumber_of_resource_unavailabilities: {}\n".format(number_of_resource_unavailabilities)
