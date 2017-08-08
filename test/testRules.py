@@ -92,7 +92,7 @@ class TestRules(unittest.TestCase):
         rulename = "12_activity_execution_counter"
         p_init = self.net.place('parrival_finished') # self.creator.task_queues[self.creator.ARRIVAL][State.queued.value])
         data = {'priority': 0}
-        tok = TimedToken("trace{}".format(50), time=0, data=data)
+        tok = Token("trace{}".format(50), time=0, data=data)
         p_init.add(tok)
         tok.trace_firing(FiringEvent('ta_enter', 0, 1))
         tok.trace_firing(FiringEvent('ta_enter', 1, 1))

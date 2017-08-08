@@ -582,11 +582,12 @@ def extend(module):
                 elif varname == 'time_since_last_arrival':
                     nextTimes += [self.data.get('time_since_last_arrival_value',
                                                 time_since_last_arrival/60 + 30)*60 - time_since_last_arrival] # add 5 minutes
-            nextTimes = [nexttime for nexttime in nextTimes if nexttime >= 0.5]
+            next_valid_times = [nexttime for nexttime in nextTimes if nexttime >= 0.5]
             # print list(varnames)
-            if len(nextTimes) == 0:
-                return None
-            return min(nextTimes)
+            if len(next_valid_times) == 0:
+                return None  # make sure to increment the time at least by one unit, otherwise there is no point in addint a new time.
+
+            return min(next_valid_times)
             # return self.params['max_wait'] - time + 1
 
         def is_always_starting(self):
@@ -1204,12 +1205,12 @@ def extend(module):
                                             if trans.not_starting % 200 == 0:
                                                 print("trans {} not starting for {} iterations".format(trans, trans.not_starting))
                                             if trans.not_starting < self.MAX_ITERATIONS_WITHOUT_PROGRESS_PER_TASK:
-                                                next_time = int(strategy.get_next_time_to_check(trans, time_waiting, mean_waiting_time,
+                                                next_time = strategy.get_next_time_to_check(trans, time_waiting, mean_waiting_time,
                                                                                                   maximum_flow_time,
                                                                                                   time_since_last_arrival,
-                                                                                                  simulation_time=global_time))
+                                                                                                  simulation_time=global_time)
                                                 if next_time:
-                                                    times_to_check.add(global_time + next_time)
+                                                    times_to_check.add(global_time + int(next_time))
                                                 # else:
                                                 #     print "no next time?"
                                         elif start and not strategy.is_always_starting():

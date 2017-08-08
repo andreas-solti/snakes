@@ -61,7 +61,7 @@ def loadRules(mypath):
 def getRules():
     if len(rules) == 0:
         # load rules:
-        path = './'
+        path = '.././'
         rules['plain'] = loadRules(path + 'rules/')
         rules['composite'] = loadRules(path + 'rules/composite/')
     return rules
