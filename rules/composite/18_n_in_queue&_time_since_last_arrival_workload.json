@@ -1,0 +1,68 @@
+[
+  {
+    "or": [
+      {
+        ">=": [
+          {
+            "var": "n_in_queue"
+          },
+          {
+            "var": "n_in_queue_value"
+          }
+        ]
+      },
+      {
+        "and": [
+          {
+            ">=": [
+              {
+                "var": "time_since_last_arrival"
+              },
+              {
+                "var": "time_since_last_arrival_value"
+              }
+            ]
+          },
+          {
+            "<=": [
+              {
+                "var": "workload"
+              },
+              {
+                "var": "workload_value"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "<=": [
+      20,
+      {
+        "var": "n_in_queue_value"
+      },
+      30
+    ]
+  },
+  {
+    "<=": [
+      60,
+      {
+        "var": "time_since_last_arrival_value"
+      },
+      120
+    ]
+  },
+  {
+    "<=": [
+      5,
+      {
+        "var": "workload_value"
+      },
+      10
+    ]
+  }
+]
+

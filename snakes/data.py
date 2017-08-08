@@ -2,6 +2,7 @@
 """
 
 import operator, inspect
+import itertools
 from snakes.compat import *
 from snakes import DomainError
 from snakes.hashables import hdict
@@ -26,15 +27,7 @@ def cross (sets) :
     @return: an iterator over the tuples in the cross-product
     @rtype: `generator`
     """
-    if len(sets) == 0 :
-        pass
-    elif len(sets) == 1 :
-        for item in sets[0] :
-            yield (item,)
-    else :
-        for item in sets[0] :
-            for others in cross(sets[1:]) :
-                yield (item,) + others
+    return itertools.product(*sets)
 
 def iterate (value) :
     """Like Python's builtin `iter` but consider strings as atomic.

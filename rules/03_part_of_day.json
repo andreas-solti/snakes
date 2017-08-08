@@ -1,0 +1,26 @@
+[
+  {
+    "==": [
+      {
+        "var": "part_of_day"
+      },
+      {
+        "var": "part_of_day_value"
+      }
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "part_of_day_value"
+      },
+      [
+        "morning",
+        "noon",
+        "afternoon",
+        "evening",
+        "night"
+      ]
+    ]
+  }
+]

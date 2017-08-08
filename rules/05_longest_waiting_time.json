@@ -1,0 +1,21 @@
+[
+  {
+    ">=": [
+      {
+        "var": "longest_waiting_time"
+      },
+      {
+        "var": "longest_waiting_time_value"
+      }
+    ]
+  },
+  {
+    "<=": [
+      60,
+      {
+        "var": "longest_waiting_time_value"
+      },
+      300
+    ]
+  }
+]

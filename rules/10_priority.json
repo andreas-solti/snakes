@@ -1,0 +1,22 @@
+[
+  {
+    "==": [
+      {
+        "var": "attributes.priority"
+      },
+      {
+        "var": "priority_value"
+      }
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "priority_value"
+      },
+      [
+        1
+      ]
+    ]
+  }
+]

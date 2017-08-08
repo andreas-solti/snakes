@@ -1,0 +1,55 @@
+[
+  {
+    "and": [
+      {
+        "==": [
+          {
+            "var": "day_of_week"
+          },
+          {
+            "var": "day_of_week_value"
+          }
+        ]
+      },
+      {
+        "==": [
+          {
+            "var": "part_of_day"
+          },
+          {
+            "var": "part_of_day_value"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "day_of_week_value"
+      },
+      [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "part_of_day_value"
+      },
+      [
+        "morning",
+        "noon",
+        "afternoon",
+        "evening"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    ">=": [
+      {
+        "var": "n_in_queue"
+      },
+      {
+        "var": "n_in_queue_value"
+      }
+    ]
+  },
+  {
+    "<=": [
+      5,
+      {
+        "var": "n_in_queue_value"
+      },
+      15
+    ]
+  }
+]

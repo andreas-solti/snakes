@@ -1,0 +1,71 @@
+[
+  {
+    "and": [
+      {
+        "or": [
+          {
+            "==": [
+              {
+                "var": "hour_of_day"
+              },
+              {
+                "var": "hour_of_day_value"
+              }
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "part_of_day"
+              },
+              {
+                "var": "part_of_day_value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        ">=": [
+          {
+            "var": "n_in_queue"
+          },
+          {
+            "var": "n_in_queue_value"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "<=": [
+      10,
+      {
+        "var": "hour_of_day_value"
+      },
+      14
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "part_of_day_value"
+      },
+      [
+        "morning",
+        "noon",
+        "afternoon",
+        "evening"
+      ]
+    ]
+  },
+  {
+    "<=": [
+      10,
+      {
+        "var": "n_in_queue_value"
+      },
+      20
+    ]
+  }
+]

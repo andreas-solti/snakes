@@ -1,0 +1,21 @@
+[
+  {
+    ">=": [
+      {
+        "var": "maximum_flow_time"
+      },
+      {
+        "var": "maximum_flow_time_value"
+      }
+    ]
+  },
+  {
+    "<=": [
+      120,
+      {
+        "var": "maximum_flow_time_value"
+      },
+      240
+    ]
+  }
+]

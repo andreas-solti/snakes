@@ -1,0 +1,23 @@
+[
+  {
+    "==": [
+      {
+        "var": "aggr_attribute_priority"
+      },
+      {
+        "var": "aggr_attribute_priority_value"
+      }
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "aggr_attribute_priority_value"
+      },
+      [
+        2,
+        3
+      ]
+    ]
+  }
+]

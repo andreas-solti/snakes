@@ -1,0 +1,44 @@
+[
+  {
+    "or": [
+      {
+        ">=": [
+          {
+            "var": "n_upstream_cases"
+          },
+          {
+            "var": "n_upstream_cases_value"
+          }
+        ]
+      },
+      {
+        ">=": [
+          {
+            "var": "longest_waiting_time"
+          },
+          {
+            "var": "longest_waiting_time_value"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "<=": [
+      2,
+      {
+        "var": "n_upstream_cases_value"
+      },
+      5
+    ]
+  },
+  {
+    "<=": [
+      240,
+      {
+        "var": "longest_waiting_time_value"
+      },
+      360
+    ]
+  }
+]

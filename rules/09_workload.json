@@ -1,0 +1,21 @@
+[
+  {
+    ">=": [
+      {
+        "var": "workload"
+      },
+      {
+        "var": "workload_value"
+      }
+    ]
+  },
+  {
+    "<=": [
+      10,
+      {
+        "var": "workload_value"
+      },
+      20
+    ]
+  }
+]

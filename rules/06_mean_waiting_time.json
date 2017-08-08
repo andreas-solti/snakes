@@ -1,0 +1,21 @@
+[
+  {
+    ">=": [
+      {
+        "var": "mean_waiting_time"
+      },
+      {
+        "var": "mean_waiting_time_value"
+      }
+    ]
+  },
+  {
+    "<=": [
+      60,
+      {
+        "var": "mean_waiting_time_value"
+      },
+      180
+    ]
+  }
+]

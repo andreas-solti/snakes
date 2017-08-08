@@ -1,0 +1,28 @@
+[
+  {
+    "==": [
+      {
+        "var": "day_of_week"
+      },
+      {
+        "var": "day_of_week_value"
+      }
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "day_of_week_value"
+      },
+      [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    ]
+  }
+]

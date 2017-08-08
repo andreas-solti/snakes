@@ -1,0 +1,46 @@
+[
+  {
+    "or": [
+      {
+        ">=": [
+          {
+            "var": "mean_waiting_time"
+          },
+          {
+            "var": "mean_waiting_time_value"
+          }
+        ]
+      },
+      {
+        ">=": [
+          {
+            "var": "aggr_attribute_priority"
+          },
+          {
+            "var": "aggr_attribute_priority_value"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "<=": [
+      150,
+      {
+        "var": "mean_waiting_time_value"
+      },
+      280
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "aggr_attribute_priority_value"
+      },
+      [
+        2,
+        3
+      ]
+    ]
+  }
+]

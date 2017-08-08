@@ -1,0 +1,90 @@
+[
+  {
+    "and": [
+      {
+        "or": [
+          {
+            ">=": [
+              {
+                "var": "longest_waiting_time"
+              },
+              {
+                "var": "longest_waiting_time_value"
+              }
+            ]
+          },
+          {
+            ">=": [
+              {
+                "var": "mean_waiting_time"
+              },
+              {
+                "var": "mean_waiting_time_value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "or": [
+          {
+            ">=": [
+              {
+                "var": "time_since_last_arrival"
+              },
+              {
+                "var": "time_since_last_arrival_value"
+              }
+            ]
+          },
+          {
+            ">=": [
+              {
+                "var": "n_in_queue"
+              },
+              {
+                "var": "n_in_queue_value"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "<=": [
+      300,
+      {
+        "var": "longest_waiting_time_value"
+      },
+      420
+    ]
+  },
+  {
+    "<=": [
+      180,
+      {
+        "var": "mean_waiting_time_value"
+      },
+      240
+    ]
+  },
+  {
+    "<=": [
+      60,
+      {
+        "var": "time_since_last_arrival_value"
+      },
+      120
+    ]
+  },
+  {
+    "<=": [
+      15,
+      {
+        "var": "n_in_queue_value"
+      },
+      25
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+"Quality Check 1/Final Inspection Q.C."		Rule 1: $$$hour_of_day > 5	hour_of_day <= 7	time_since_last_arrival > 0$$$	Rule 2: $$$n_in_queue <= 8	hour_of_day > 12	hour_of_day <= 15	time_since_last_arrival <= 0$$$	Rule 3: $$$hour_of_day > 8	hour_of_day <= 15	time_since_last_arrival > 0	time_since_last_arrival <= 0.5$$$	Rule 4: $$$hour_of_day > 8	hour_of_day <= 9$$$
+"Machine 11/Flat Grinding"	Rule 1: $$$hour_of_day <= 14$$$
+"Machine 27/Grinding Rework"	Rule 1: $$$n_in_queue > 1$$$
+"Machine 1/Lapping"	Rule 1: $$$hour_of_day <= 0$$$	Rule 2: $$$hour_of_day > 11	hour_of_day <= 14	day_of_week = Sun$$$	Rule 3: $$$n_in_queue > 7	hour_of_day > 1	hour_of_day <= 16	time_since_last_arrival > 0$$$	Rule 4: $$$n_in_queue > 7	hour_of_day <= 16	mean_wt_queueing_cases <= 164.9417$$$	Rule 5: $$$hour_of_day > 1	hour_of_day <= 16$$$
+"Machine 7- Laser Marking/Laser Marking"	Rule 1: $$$n_in_queue > 1	mean_wt_queueing_cases <= 84.78333	time_since_last_arrival > 0$$$	Rule 2: $$$n_in_queue > 2	time_since_last_arrival > 0$$$
+"Packing/Packing"	Rule 1: $$$hour_of_day <= 0$$$
+"Machine 12/Round Grinding"	Rule 1: $$$day_of_week in ["Wed", "Tue", "Thu"]$$$
+"Machine 2/Round Grinding"	Rule 1: $$$wt_longest_queueing_case > 0$$$
+"Machine 27/Round Grinding"	Rule 1: $$$n_in_queue > 1$$$
+"Machine 3/Round Grinding"	Rule 1: $$$n_in_queue > 1$$$
+"Quality Check 1/Round Grinding"	Rule 1: $$$hour_of_day <= 7$$$
+"Machine 10/Turning & Milling"	Rule 1: $$$n_in_queue > 1$$$
+"Machine 4/Turning & Milling"	Rule 1: $$$wt_longest_queueing_case > 0	time_since_last_arrival <= 4.366667$$$
+"Machine 5/Turning & Milling"	Rule 1: $$$n_in_queue > 1$$$	Rule 2: $$$day_of_week in ["Mon", "Wed", "Sat"]$$$
+"Machine 6/Turning & Milling"	Rule 1: $$$n_in_queue > 1$$$	Rule 2: $$$hour_of_day > 17$$$
+"Quality Check 1/Turning & Milling Q.C."	Rule 1: $$$n_in_queue > 3	hour_of_day <= 15	day_of_week = Sun	mean_wt_queueing_cases <= 111.22	time_since_last_arrival > 0$$$	Rule 2: $$$n_in_queue > 3	hour_of_day <= 15	day_of_week = Thurs	time_since_last_arrival > 0	res_workload <= 16$$$	Rule 3: $$$n_in_queue > 4	n_in_queue <= 5	mean_wt_queueing_cases <= 80.475	time_since_last_arrival > 0	time_since_last_arrival <= 3.433333$$$	Rule 4: $$$n_in_queue > 3	hour_of_day <= 15	day_of_week = Mon	mean_wt_queueing_cases <= 123.2667	time_since_last_arrival > 0$$$	Rule 5: $$$hour_of_day <= 15$$$
+"Quality Check 1/Turning Q.C."	Rule 1: $$$n_in_queue > 1	wt_longest_queueing_case > 7.666667$$$
+
+

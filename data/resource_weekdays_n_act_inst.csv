@@ -1,0 +1,154 @@
+"resource";"weekday_start";"n_act_instances"
+"Machine 1";"Sun";55
+"Machine 1";"Mon";69
+"Machine 1";"Tues";84
+"Machine 1";"Wed";74
+"Machine 1";"Thurs";57
+"Machine 1";"Fri";33
+"Machine 10";"Sun";38
+"Machine 10";"Mon";40
+"Machine 10";"Tues";43
+"Machine 10";"Wed";46
+"Machine 10";"Thurs";30
+"Machine 10";"Fri";13
+"Machine 10";"Sat";7
+"Machine 11";"Sun";19
+"Machine 11";"Mon";17
+"Machine 11";"Tues";29
+"Machine 11";"Wed";24
+"Machine 11";"Thurs";26
+"Machine 11";"Fri";9
+"Machine 12";"Sun";11
+"Machine 12";"Mon";18
+"Machine 12";"Tues";16
+"Machine 12";"Wed";26
+"Machine 12";"Thurs";14
+"Machine 12";"Fri";6
+"Machine 12";"Sat";5
+"Machine 14";"Sun";2
+"Machine 14";"Mon";3
+"Machine 14";"Tues";6
+"Machine 14";"Wed";4
+"Machine 14";"Thurs";6
+"Machine 14";"Fri";1
+"Machine 15";"Sun";11
+"Machine 15";"Mon";13
+"Machine 15";"Tues";10
+"Machine 15";"Wed";9
+"Machine 15";"Thurs";8
+"Machine 15";"Fri";6
+"Machine 15";"Sat";2
+"Machine 16";"Sun";1
+"Machine 16";"Mon";1
+"Machine 16";"Tues";1
+"Machine 16";"Wed";2
+"Machine 16";"Thurs";2
+"Machine 16";"Fri";3
+"Machine 17";"Sun";2
+"Machine 17";"Mon";1
+"Machine 17";"Tues";1
+"Machine 17";"Wed";1
+"Machine 18";"Wed";5
+"Machine 18";"Thurs";2
+"Machine 19";"Wed";3
+"Machine 19";"Thurs";3
+"Machine 2";"Sun";56
+"Machine 2";"Mon";55
+"Machine 2";"Tues";58
+"Machine 2";"Wed";63
+"Machine 2";"Thurs";54
+"Machine 2";"Fri";19
+"Machine 2";"Sat";13
+"Machine 21";"Mon";2
+"Machine 21";"Thurs";2
+"Machine 22";"Mon";3
+"Machine 22";"Tues";2
+"Machine 22";"Wed";1
+"Machine 23";"Sun";1
+"Machine 23";"Mon";1
+"Machine 23";"Tues";1
+"Machine 25";"Mon";2
+"Machine 26";"Fri";1
+"Machine 27";"Sun";35
+"Machine 27";"Mon";35
+"Machine 27";"Tues";28
+"Machine 27";"Wed";29
+"Machine 27";"Thurs";26
+"Machine 27";"Fri";3
+"Machine 27";"Sat";3
+"Machine 3";"Sun";65
+"Machine 3";"Mon";49
+"Machine 3";"Tues";61
+"Machine 3";"Wed";66
+"Machine 3";"Thurs";48
+"Machine 3";"Fri";16
+"Machine 3";"Sat";16
+"Machine 4";"Sun";47
+"Machine 4";"Mon";61
+"Machine 4";"Tues";65
+"Machine 4";"Wed";58
+"Machine 4";"Thurs";46
+"Machine 4";"Fri";23
+"Machine 4";"Sat";33
+"Machine 5";"Sun";44
+"Machine 5";"Mon";43
+"Machine 5";"Tues";61
+"Machine 5";"Wed";66
+"Machine 5";"Thurs";53
+"Machine 5";"Fri";23
+"Machine 5";"Sat";29
+"Machine 6";"Sun";56
+"Machine 6";"Mon";54
+"Machine 6";"Tues";59
+"Machine 6";"Wed";55
+"Machine 6";"Thurs";47
+"Machine 6";"Fri";18
+"Machine 6";"Sat";41
+"Machine 7- Laser Marking";"Sun";40
+"Machine 7- Laser Marking";"Mon";59
+"Machine 7- Laser Marking";"Tues";48
+"Machine 7- Laser Marking";"Wed";61
+"Machine 7- Laser Marking";"Thurs";36
+"Machine 7- Laser Marking";"Fri";10
+"Machine 8";"Sun";27
+"Machine 8";"Mon";46
+"Machine 8";"Tues";49
+"Machine 8";"Wed";58
+"Machine 8";"Thurs";48
+"Machine 8";"Fri";18
+"Machine 9";"Sun";44
+"Machine 9";"Mon";41
+"Machine 9";"Tues";44
+"Machine 9";"Wed";45
+"Machine 9";"Thurs";47
+"Machine 9";"Fri";7
+"Machine 9";"Sat";7
+"Manual Deburring";"Sun";2
+"Manual Deburring";"Mon";1
+"Manual Deburring";"Tues";1
+"Manual Deburring";"Wed";4
+"Manual Deburring";"Fri";1
+"Manual Milling";"Wed";2
+"Oven";"Mon";1
+"Oven";"Thurs";1
+"Oven";"Sat";1
+"Packing";"Sun";27
+"Packing";"Mon";48
+"Packing";"Tues";51
+"Packing";"Wed";50
+"Packing";"Thurs";58
+"Packing";"Fri";43
+"Quality Check 1";"Sun";191
+"Quality Check 1";"Mon";208
+"Quality Check 1";"Tues";240
+"Quality Check 1";"Wed";220
+"Quality Check 1";"Thurs";217
+"Quality Check 1";"Fri";120
+"Quality Check 2";"Wed";1
+"Quality Check 2";"Thurs";1
+"Wire Cut";"Sun";5
+"Wire Cut";"Mon";1
+"Wire Cut";"Tues";4
+"Wire Cut";"Wed";5
+"Wire Cut";"Thurs";5
+"Wire Cut";"Fri";2

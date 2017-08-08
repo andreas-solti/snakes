@@ -1,0 +1,63 @@
+[
+  {
+    "and": [
+      {
+        ">=": [
+          {
+            "var": "n_in_queue"
+          },
+          {
+            "var": "n_in_queue_value"
+          }
+        ]
+      },
+      {
+        ">=": [
+          {
+            "var": "mean_waiting_time"
+          },
+          {
+            "var": "mean_waiting_time_value"
+          }
+        ]
+      },
+      {
+        ">=": [
+          {
+            "var": "longest_waiting_time"
+          },
+          {
+            "var": "longest_waiting_time_value"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "<=": [
+      10,
+      {
+        "var": "n_in_queue_value"
+      },
+      20
+    ]
+  },
+  {
+    "<=": [
+      90,
+      {
+        "var": "mean_waiting_time_value"
+      },
+      120
+    ]
+  },
+  {
+    "<=": [
+      360,
+      {
+        "var": "longest_waiting_time_value"
+      },
+      480
+    ]
+  }
+]

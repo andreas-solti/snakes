@@ -1,0 +1,24 @@
+[
+  {
+    ">=": [
+      {
+        "var": "activity_execution_counter"
+      },
+      {
+        "var": "activity_execution_counter_value"
+      }
+    ]
+  },
+  {
+    "in": [
+      {
+        "var": "activity_execution_counter_value"
+      },
+      [
+        2,
+        3,
+        4
+      ]
+    ]
+  }
+]

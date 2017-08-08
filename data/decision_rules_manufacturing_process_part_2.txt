@@ -1,0 +1,13 @@
+"Quality Check 1/Final Inspection Q.C."	Rule 1: $$$n_in_queue > 2	hour_of_day <= 14	time_since_last_arrival > 0$$$
+"Machine 11/Flat Grinding"	Rule 1: $$$hour_of_day <= 10$$$
+"Machine 1/Lapping"	Rule 1: $$$hour_of_day <= 0$$$	Rule 2: $$$n_in_queue > 6	hour_of_day > 1$$$
+"Machine 7- Laser Marking/Laser Marking"	Rule 1: $$$n_in_queue > 1	time_since_last_arrival > 0$$$
+"Packing/Packing"	Rule 1: $$$hour_of_day <= 0$$$
+"Machine 2/Round Grinding"	Rule 1: $$$wt_longest_queueing_case > 0$$$
+"Machine 3/Round Grinding"	Rule 1: $$$n_in_queue > 1$$$
+"Quality Check 1/Round Grinding"	Rule 1: $$$hour_of_day <= 7$$$
+"Machine 4/Turning & Milling"	Rule 1: $$$n_in_queue > 1$$$
+"Quality Check 1/Turning & Milling Q.C."	Rule 1: $$$hour_of_day > 10	hour_of_day <= 14	time_since_last_arrival <= 0$$$	Rule 2: $$$hour_of_day <= 8	time_since_last_arrival > 0$$$		Rule 3: $$$n_in_queue > 2	hour_of_day <= 14	time_since_last_arrival > 0$$$
+"Quality Check 1/Turning Q.C."	Rule 1: $$$wt_longest_queueing_case > 7$$$
+	
+
